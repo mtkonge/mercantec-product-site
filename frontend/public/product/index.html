@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="/style.css" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        <title>Produktfremvisning</title>
+    </head>
+    <body>
+        <header class="main-toolbar" id="main-toolbar"></header>
+        <div class="product-container">
+            <div class="product-image-container">
+                <img
+                    id="product-image"
+                    class="product-image"
+                    src="/images/example.jpg"
+                />
+            </div>
+
+            <div class="product-description">
+                <div class="product-toolbar-container">
+                    <h2 id="product-title">Henter produkt...</h2>
+                    <button
+                        id="product-delete"
+                        class="interactable"
+                        title="Slet produkt"
+                    >
+                        <img src="/images/delete.svg" />
+                    </button>
+                </div>
+                <p id="product-content"></p>
+            </div>
+
+            <div class="form">
+                <h2 class="form-title">Bestil Service</h2>
+                <p class="form-error"></p>
+                <label for="first-name">Fornavn</label>
+                <input type="text" id="first-name" />
+                <label for="last-name">Efternavn</label>
+                <input type="text" id="last-name" />
+                <label for="email">Email</label>
+                <input type="text" id="email" />
+                <label for="phone">Telefonnummer</label>
+                <input type="text" id="phone" />
+                <label for="description">Detaljer</label>
+                <textarea
+                    maxlength="1000"
+                    type="text"
+                    id="description"
+                ></textarea>
+                <button id="submit" class="interactable">Bestil</button>
+            </div>
+        </div>
+        <script src="/js/toolbar.js"></script>
+        <script src="/js/product.js"></script>
+        <script src="/js/form.js"></script>
+        <script src="/js/createOrder.js"></script>
+    </body>
+</html>

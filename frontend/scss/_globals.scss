@@ -1,0 +1,40 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --ff-text: "Montserrat", sans-serif;
+    --clr-brand: #0e38ab;
+    --box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.1);
+    --expanded-box-shadow: 0px 0px 16px 8px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    margin: 0;
+    font-family: var(--ff-text);
+    background-color: #eee;
+    color: #0c0c0c;
+    min-height: 100vh;
+}
+
+a[href] {
+    color: var(--clr-brand);
+}
+
+:focus-visible {
+    outline: 2px solid var(--clr-brand);
+}
+
+.interactable {
+    transition: 50ms opacity linear;
+
+    &:hover {
+        opacity: 0.75;
+    }
+
+    &:active {
+        opacity: 0.6;
+    }
+}

@@ -1,0 +1,7 @@
+backend/dist/
+backend/data/
+
+frontend/public/*.css*
+frontend/public/js/
+
+node_modules/

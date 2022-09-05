@@ -1,0 +1,73 @@
+.centered-form-container {
+    margin: 4rem;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+.form {
+    box-shadow: var(--box-shadow);
+    border-radius: 1rem;
+    background: #fff;
+    padding: 2rem;
+    height: min-content;
+
+    .form-error {
+        color: #ee2222;
+        font-weight: bold;
+    }
+
+    .form-title {
+        margin: 0;
+        text-align: center;
+    }
+
+    label {
+        display: block;
+        margin-top: 1em;
+        margin-bottom: 0.5em;
+    }
+
+    label,
+    input,
+    textarea {
+        font-size: 1.2em;
+    }
+
+    input,
+    textarea {
+        display: block;
+        font-family: inherit;
+        width: 100%;
+        padding: 0.5rem;
+        border-radius: 0.25rem;
+        border: 1px solid #ccc;
+    }
+
+    textarea {
+        resize: vertical;
+        height: 8em;
+    }
+
+    button {
+        background-color: #0c0c0c;
+        color: #fff;
+        font-size: 1.3em;
+
+        margin-top: 1em;
+        margin-left: auto;
+        margin-right: auto;
+
+        display: block;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+
+        cursor: pointer;
+    }
+
+    p {
+        margin-top: 1em;
+        margin-bottom: 0;
+    }
+}

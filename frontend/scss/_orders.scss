@@ -1,0 +1,159 @@
+.order-container {
+    padding: 1rem;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+#orders-list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+
+    &.loading {
+        display: none;
+
+        ~ .orders-loading-image {
+            display: block;
+        }
+    }
+
+    ~ .orders-loading-image {
+        display: none;
+        margin: 0 auto;
+        animation: spin-animation 1s linear;
+    }
+
+    &:empty::after {
+        content: "Ingen bestillinger";
+        text-align: center;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        background-color: #fff;
+        font-size: 1.5rem;
+    }
+}
+
+@keyframes spin-animation {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    50% {
+        transform: rotateZ(180deg);
+    }
+
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+#show-hidden-orders:not(:checked) ~ #orders-list .archived {
+    display: none;
+}
+
+label[for="show-hidden-orders"] {
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+
+#show-hidden-orders {
+    width: 1rem;
+    height: 1rem;
+}
+
+.order {
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    margin-bottom: 1rem;
+
+    &.archived {
+        background-color: #f2f2f2;
+    }
+
+    .order-details {
+        display: none;
+        font-size: 1.1em;
+        border-top: 2px solid #ccc;
+        padding: 0rem 1rem;
+        border-radius: 0 0 1rem 1rem;
+
+        .order-email {
+            color: #aaa;
+        }
+    }
+
+    &.order-opened {
+        .order-details {
+            display: block;
+        }
+
+        .order-header {
+            padding-bottom: 1.5rem;
+        }
+
+        .order-toggle-icon {
+            transform: rotateZ(180deg);
+        }
+    }
+
+    a {
+        font-weight: bold;
+    }
+}
+
+.order-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .order-header-toggle {
+        font-size: unset;
+        font-family: unset;
+        background: unset;
+        border: unset;
+
+        flex: 1;
+
+        cursor: pointer;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 1rem;
+
+        .product-title {
+            margin: 0;
+        }
+
+        .order-sub-info {
+            color: #aaa;
+            font-weight: bold;
+            font-size: 1.25em;
+        }
+    }
+
+    .order-toggle-icon {
+        margin-left: auto;
+        pointer-events: none;
+
+        transition: 150ms linear transform;
+
+        &::selection {
+            background: transparent;
+        }
+    }
+
+    .order-action-icon {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        font-size: unset;
+        height: 2.25em;
+        padding: 0;
+
+        .order-action-icon-image {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

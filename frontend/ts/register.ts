@@ -1,0 +1,1 @@
+usernamePasswordFormMain("register", "/login");

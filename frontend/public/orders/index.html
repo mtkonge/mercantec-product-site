@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="/style.css" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        <title>Bestillinger</title>
+    </head>
+    <body>
+        <header class="main-toolbar" id="main-toolbar"></header>
+        <div class="order-container">
+            <h1>Bestillinger</h1>
+            <input id="show-hidden-orders" type="checkbox" />
+            <label for="show-hidden-orders">Vis arkiverede bestillinger</label>
+            <div class="orders-list" id="orders-list"></div>
+            <img src="/images/loading.svg" class="orders-loading-image" />
+        </div>
+        <script src="/js/toolbar.js"></script>
+        <script src="/js/OrderItemAction.js"></script>
+        <script src="/js/orders.js"></script>
+    </body>
+</html>

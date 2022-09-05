@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="/style.css" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        <title>Skab produkt</title>
+    </head>
+    <body>
+        <header class="main-toolbar" id="main-toolbar"></header>
+        <div class="centered-form-container">
+            <div class="form">
+                <h2 class="form-title">Skab produkt</h2>
+                <p class="form-error"></p>
+                <label for="title">Produkttitel</label>
+                <input type="text" id="title" />
+                <label for="image">Produktbillede</label>
+                <input type="file" id="image" accept="image/*" />
+                <label for="desc">Produktbeskrivelse</label>
+                <textarea id="desc"></textarea>
+                <button id="submit" class="interactable">Skab produkt</button>
+            </div>
+        </div>
+        <script src="/js/toolbar.js"></script>
+        <script src="/js/form.js"></script>
+        <script src="/js/createProduct.js"></script>
+    </body>
+</html>

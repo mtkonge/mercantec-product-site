@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ES2015",
+    "lib": ["ES2015"],
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "outDir": "./dist/",
+    "rootDir": "./src/",
+    "baseUrl": "./src/",
+    "allowSyntheticDefaultImports": true,
+    "inlineSourceMap": true,
+    "inlineSources": true,
+    "strict": true,
+    "esModuleInterop": true,
+  },
+  "include": ["./src/**/*"]
+}

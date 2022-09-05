@@ -1,0 +1,38 @@
+.product-example-grid {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+
+    .product-example {
+        --product-border-radius: 1rem;
+        background-color: #fff;
+        max-width: 1000px;
+
+        border-radius: var(--product-border-radius);
+        color: currentcolor;
+        text-decoration: none;
+        height: min-content;
+
+        .product-example-image {
+            width: 100%;
+            max-height: 50vh;
+            object-fit: cover;
+            border-top-left-radius: var(--product-border-radius);
+            border-top-right-radius: var(--product-border-radius);
+        }
+
+        .product-example-title {
+            padding: 1rem 2rem;
+            word-wrap: anywhere;
+        }
+
+        box-shadow: var(--box-shadow);
+        &:hover {
+            transform: scale(1.025);
+            box-shadow: var(--expanded-box-shadow);
+        }
+        transition: 150ms box-shadow linear, 150ms transform linear;
+    }
+}
