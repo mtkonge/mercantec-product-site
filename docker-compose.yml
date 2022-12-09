@@ -1,0 +1,25 @@
+services:
+  frontend:
+    restart: unless-stopped
+    build: ./frontend/
+    expose:
+      - "8000" # expose frontend to nginx
+  backend:
+    restart: unless-stopped
+    build: ./backend/
+    expose:
+      - "8000" # expose backend to nginx
+    volumes:
+      - backend_data:/home/runner/data # persistent filedb 
+  nginx:
+    restart: unless-stopped
+    image: nginx
+    ports: 
+      - "80:80"
+    depends_on:
+      - frontend
+      - backend
+    volumes:
+      - ./nginx:/etc/nginx/templates
+volumes:
+  backend_data:

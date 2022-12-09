@@ -15,7 +15,6 @@ export class MemoryDb extends Database {
         this.products = [];
         this.orders = [];
     }
-    // await readFile("./products.json");
 
     public initialize = async () => {
         this.users = [

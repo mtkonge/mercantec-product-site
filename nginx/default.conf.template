@@ -1,0 +1,20 @@
+server {
+    listen          80;
+    server_name     soccloud.dk;
+    index           index.html;
+
+    location / {
+        proxy_pass       http://frontend:8000/;
+        proxy_redirect   off;
+    }
+
+    location ~* /product/[a-zA-Z0-9]$ {
+        proxy_pass       http://frontend:8000;
+        proxy_redirect   off;
+    }
+
+    location /api/ {
+        proxy_pass       http://backend:8000/;
+        proxy_redirect   off;
+    }
+}
